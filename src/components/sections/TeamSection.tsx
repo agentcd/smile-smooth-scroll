@@ -68,7 +68,7 @@ const TeamSection = () => {
           {team.map((member, index) => (
             <div
               key={member.name}
-              className="bg-card-accent rounded-dental-lg p-8 shadow-dental-md hover:shadow-dental-lg transition-all duration-300 hover:-translate-y-1 group animate-slide-up"
+              className="bg-card-accent rounded-dental-lg p-8 shadow-dental-md hover:shadow-dental-lg transition-all duration-500 hover:-translate-y-2 hover:scale-102 group animate-slide-up transform-gpu"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex flex-col md:flex-row gap-6">

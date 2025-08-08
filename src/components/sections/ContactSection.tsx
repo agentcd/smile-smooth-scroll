@@ -10,6 +10,42 @@ import {
   Send,
   CheckCircle 
 } from "lucide-react";
+
+// Dynamic Map Component
+interface DynamicMapProps {
+  address: string;
+  mapUrl?: string;
+}
+
+const DynamicMap = ({ address, mapUrl }: DynamicMapProps) => {
+  if (!mapUrl) {
+    return (
+      <div className="w-full h-full bg-dental-primary-light rounded-dental flex items-center justify-center">
+        <div className="text-center">
+          <MapPin className="w-12 h-12 text-dental-primary mx-auto mb-4" />
+          <p className="text-dental-primary font-semibold">
+            Map Loading...
+          </p>
+          <p className="text-neutral-600 text-sm mt-2">{address}</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <iframe
+      src={mapUrl}
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title={`Map showing location: ${address}`}
+      className="rounded-dental"
+    />
+  );
+};
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
@@ -284,21 +320,16 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Map placeholder */}
+            {/* Dynamic Map */}
             <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg">
               <h3 className="text-2xl font-bold text-neutral-800 mb-6">
                 Find Us
               </h3>
-              <div className="w-full h-64 bg-dental-primary-light rounded-dental flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-dental-primary mx-auto mb-4" />
-                  <p className="text-dental-primary font-semibold">
-                    Interactive Map Coming Soon
-                  </p>
-                  <p className="text-neutral-600 text-sm mt-2">
-                    123 Wellness Boulevard, Beverly Hills, CA
-                  </p>
-                </div>
+              <div className="w-full h-64 rounded-dental overflow-hidden shadow-dental-md">
+                <DynamicMap 
+                  address="123 Wellness Boulevard, Beverly Hills, CA 90210"
+                  mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.6384394568375!2d-118.39862878479566!3d34.101610880600985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bbc85b3b8c85%3A0x1f2e0b0b0b0b0b0b!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1640995200000!5m2!1sen!2sus"
+                />
               </div>
             </div>
           </div>

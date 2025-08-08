@@ -7,35 +7,35 @@ const ServicesSection = () => {
       icon: Smile,
       title: "Cosmetic Dentistry",
       description: "Transform your smile with veneers, whitening, and aesthetic treatments designed to boost your confidence.",
-      price: "From $299",
+      price: "From ₹22,500",
       features: ["Teeth Whitening", "Porcelain Veneers", "Smile Makeovers"],
     },
     {
       icon: Heart,
       title: "Dental Implants",
       description: "Permanent tooth replacement solutions that look, feel, and function like natural teeth.",
-      price: "From $1,299",
+      price: "From ₹97,500",
       features: ["Single Implants", "Full Mouth Restoration", "Same-Day Options"],
     },
     {
       icon: Shield,
       title: "Preventive Care",
       description: "Comprehensive exams, cleanings, and preventive treatments to maintain optimal oral health.",
-      price: "From $99",
+      price: "From ₹7,500",
       features: ["Regular Cleanings", "Oral Exams", "Fluoride Treatments"],
     },
     {
       icon: Zap,
       title: "Emergency Care",
       description: "24/7 emergency dental services for urgent dental problems and pain relief.",
-      price: "From $149",
+      price: "From ₹11,200",
       features: ["Same-Day Appointments", "Pain Management", "Urgent Repairs"],
     },
     {
       icon: Clock,
       title: "Restorative Dentistry",
       description: "Repair and restore damaged teeth with crowns, bridges, and advanced restoration techniques.",
-      price: "From $499",
+      price: "From ₹37,500",
       features: ["Dental Crowns", "Bridges", "Root Canal Therapy"],
     },
   ];
@@ -83,7 +83,7 @@ const ServicesSection = () => {
             return (
               <div
                 key={service.title}
-                className="bg-white rounded-dental-lg p-8 shadow-dental-md hover:shadow-dental-lg transition-all duration-300 hover:-translate-y-2 group animate-slide-up"
+                className="bg-white rounded-dental-lg p-8 shadow-dental-md hover:shadow-dental-lg transition-all duration-500 hover:-translate-y-3 hover:scale-105 group animate-slide-up transform-gpu"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Icon */}
