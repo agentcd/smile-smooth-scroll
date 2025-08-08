@@ -10,6 +10,7 @@ import {
   Send,
   CheckCircle 
 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 // Dynamic Map Component
 interface DynamicMapProps {
@@ -46,7 +47,6 @@ const DynamicMap = ({ address, mapUrl }: DynamicMapProps) => {
     />
   );
 };
-import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -148,9 +148,10 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
-          <div className="animate-slide-up">
+        {/* Responsive Grid Layout - Balanced 2x2 on desktop, stacked on mobile */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Book Your Consultation Form - Top priority, full width on mobile */}
+          <div className="lg:col-span-2 animate-slide-up">
             <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg">
               <h3 className="text-2xl font-bold text-neutral-800 mb-6">
                 Book Your Consultation
@@ -252,10 +253,9 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Contact Information */}
-          <div className="space-y-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            {/* Contact Details */}
-            <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg">
+          {/* Contact Information Card */}
+          <div className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
+            <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg h-full">
               <h3 className="text-2xl font-bold text-neutral-800 mb-6">
                 Contact Information
               </h3>
@@ -284,9 +284,11 @@ const ContactSection = () => {
                 })}
               </div>
             </div>
+          </div>
 
-            {/* Office Hours */}
-            <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg">
+          {/* Office Hours Card */}
+          <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg h-full">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-dental-primary-light rounded-dental flex items-center justify-center">
                   <Clock className="w-6 h-6 text-dental-primary" />
@@ -319,17 +321,22 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Dynamic Map */}
+          {/* Find Us Map - Full width for better visibility */}
+          <div className="lg:col-span-2 animate-slide-up" style={{ animationDelay: "0.3s" }}>
             <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg">
               <h3 className="text-2xl font-bold text-neutral-800 mb-6">
                 Find Us
               </h3>
-              <div className="w-full h-64 rounded-dental overflow-hidden shadow-dental-md">
+              <div className="w-full h-80 rounded-dental overflow-hidden shadow-dental-md">
                 <DynamicMap 
                   address="123 Wellness Boulevard, Beverly Hills, CA 90210"
                   mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.6384394568375!2d-118.39862878479566!3d34.101610880600985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bbc85b3b8c85%3A0x1f2e0b0b0b0b0b0b!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1640995200000!5m2!1sen!2sus"
                 />
+              </div>
+              <div className="mt-4 text-sm text-neutral-600 text-center">
+                📍 123 Wellness Boulevard, Beverly Hills, CA 90210
               </div>
             </div>
           </div>
