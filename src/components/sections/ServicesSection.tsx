@@ -83,7 +83,7 @@ const ServicesSection = () => {
             return (
               <div
                 key={service.title}
-                className="bg-white rounded-dental-lg p-8 shadow-dental-md hover:shadow-dental-lg transition-all duration-500 hover:-translate-y-3 hover:scale-105 group animate-slide-up transform-gpu"
+                className="bg-white rounded-dental-lg p-8 shadow-dental-md hover:shadow-dental-lg transition-all duration-500 group animate-slide-up transform-gpu hover-zoom"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Icon */}
@@ -132,7 +132,7 @@ const ServicesSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-dental-primary to-dental-accent rounded-dental-lg p-12 text-white animate-scale-in">
+        <div className="text-center bg-gradient-to-r from-dental-primary to-dental-accent rounded-dental-lg p-12 text-white animate-scale-in hover-zoom">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
             Not Sure Which Service You Need?
           </h3>

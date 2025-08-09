@@ -5,7 +5,7 @@ const EmergencyBanner = () => {
   return (
     <section className="bg-gradient-to-r from-red-500 to-red-600 py-12">
       <div className="container mx-auto px-4 lg:px-6">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 text-white">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 text-white hover-zoom">
           {/* Emergency Info */}
           <div className="flex items-center space-x-4">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center animate-pulse">

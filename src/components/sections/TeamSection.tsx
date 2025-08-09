@@ -68,7 +68,7 @@ const TeamSection = () => {
           {team.map((member, index) => (
             <div
               key={member.name}
-              className="bg-card-accent rounded-dental-lg p-8 shadow-dental-md hover:shadow-dental-lg transition-all duration-500 hover:-translate-y-2 hover:scale-102 group animate-slide-up transform-gpu"
+              className="bg-card-accent rounded-dental-lg p-8 shadow-dental-md hover:shadow-dental-lg transition-all duration-500 group animate-slide-up transform-gpu hover-zoom"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex flex-col md:flex-row gap-6">
@@ -148,7 +148,7 @@ const TeamSection = () => {
         </div>
 
         {/* Team Stats */}
-        <div className="bg-gradient-to-r from-dental-primary to-dental-accent rounded-dental-lg p-12 text-white text-center animate-scale-in">
+        <div className="bg-gradient-to-r from-dental-primary to-dental-accent rounded-dental-lg p-12 text-white text-center animate-scale-in hover-zoom">
           <h3 className="text-2xl md:text-3xl font-bold mb-8">
             Why Choose Aether Dental Studios?
           </h3>

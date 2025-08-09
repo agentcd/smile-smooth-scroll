@@ -152,7 +152,7 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Book Your Consultation Form - Top priority, full width on mobile */}
           <div className="lg:col-span-2 animate-slide-up">
-            <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg">
+            <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg hover-zoom">
               <h3 className="text-2xl font-bold text-neutral-800 mb-6">
                 Book Your Consultation
               </h3>
@@ -255,7 +255,7 @@ const ContactSection = () => {
 
           {/* Contact Information Card */}
           <div className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg h-full">
+            <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg h-full hover-zoom">
               <h3 className="text-2xl font-bold text-neutral-800 mb-6">
                 Contact Information
               </h3>
@@ -288,7 +288,7 @@ const ContactSection = () => {
 
           {/* Office Hours Card */}
           <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg h-full">
+            <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg h-full hover-zoom">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-dental-primary-light rounded-dental flex items-center justify-center">
                   <Clock className="w-6 h-6 text-dental-primary" />
@@ -325,7 +325,7 @@ const ContactSection = () => {
 
           {/* Find Us Map - Full width for better visibility */}
           <div className="lg:col-span-2 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg">
+            <div className="bg-white rounded-dental-lg p-8 shadow-dental-lg hover-zoom">
               <h3 className="text-2xl font-bold text-neutral-800 mb-6">
                 Find Us
               </h3>

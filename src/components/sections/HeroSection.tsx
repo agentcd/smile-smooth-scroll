@@ -85,21 +85,21 @@ const HeroSection = () => {
 
             {/* Trust Indicators */}
             <div className="grid grid-cols-3 gap-6">
-              <div className="text-center">
+              <div className="text-center hover-zoom">
                 <div className="flex items-center justify-center w-12 h-12 bg-dental-primary-light rounded-dental mb-3 mx-auto">
                   <Clock className="w-6 h-6 text-dental-primary" />
                 </div>
                 <div className="text-2xl font-bold text-dental-primary">15+</div>
                 <div className="text-sm text-neutral-600">Years Experience</div>
               </div>
-              <div className="text-center">
+              <div className="text-center hover-zoom">
                 <div className="flex items-center justify-center w-12 h-12 bg-dental-primary-light rounded-dental mb-3 mx-auto">
                   <Award className="w-6 h-6 text-dental-primary" />
                 </div>
                 <div className="text-2xl font-bold text-dental-primary">5000+</div>
                 <div className="text-sm text-neutral-600">Happy Patients</div>
               </div>
-              <div className="text-center">
+              <div className="text-center hover-zoom">
                 <div className="flex items-center justify-center w-12 h-12 bg-dental-primary-light rounded-dental mb-3 mx-auto">
                   <Shield className="w-6 h-6 text-dental-primary" />
                 </div>
@@ -113,7 +113,7 @@ const HeroSection = () => {
           <div className="lg:block hidden">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-dental-primary/20 to-dental-accent/20 rounded-dental-lg blur-3xl"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-dental-lg p-8 shadow-dental-lg">
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-dental-lg p-8 shadow-dental-lg hover-zoom">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-neutral-800 mb-4">
                     Book Your Visit

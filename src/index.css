@@ -159,3 +159,15 @@
     transform: scale(1);
   }
 }
+
+/* Hover Zoom Animation - Global for all containers */
+.hover-zoom {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Responsive hover - only apply on devices that support hover */
+@media (hover: hover) and (pointer: fine) {
+  .hover-zoom:hover {
+    transform: scale(1.05);
+  }
+}
