@@ -162,7 +162,7 @@
 
 /* Hover Zoom Animation - Global for all containers */
 .hover-zoom {
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Responsive hover - only apply on devices that support hover */
